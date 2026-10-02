@@ -70,8 +70,8 @@ task boot-game
 *(Or iterate fast via the OpenGOAL REPL using `task repl`, then hot-reload with `(mi)` and `(r)`).*
 
 ### 5. Enable the Mod (OFF by default)
-This mod ships **disabled** — a fresh install plays Dark Jak exactly like stock
-Jak 2. Press **L3 + SELECT** in game to open the unified **Mods** menu (it works in a normal boot, no debug mode needed) and select:
+This mod ships **disabled** — a fresh install plays Dark Jak like stock
+Jak 2, except that Dark Jak currently does not wear off after 20 seconds (known issue). Press **L3 + SELECT** in game to open the unified **Mods** menu (it works in a normal boot, no debug mode needed) and select:
 
 ```
 Mods ▸ dark-jak-enhanced ▸ Enable
