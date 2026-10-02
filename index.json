@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "sourceName": "Dark Jak Enhanced Source",
-  "lastUpdated": "2026-10-02T01:39:08Z",
+  "lastUpdated": "2026-10-02T12:12:27Z",
   "mods": {
     "dark-jak-enhanced": {
       "displayName": "Dark Jak Enhanced",
@@ -34,8 +34,8 @@
           }
         }
       ],
-      "coverArtUrl": "https://raw.githubusercontent.com/whozghiar/jak-project/mod-repo/jak2-dark-jak-enhanced/docs/img/mod/mod_cover.png",
-      "thumbnailArtUrl": "https://raw.githubusercontent.com/whozghiar/jak-project/mod-repo/jak2-dark-jak-enhanced/docs/img/mod/mod_cover.png"
+      "coverArtUrl": "https://raw.githubusercontent.com/whozghiar/jak-project/mods/jak2-dark-jak-enhanced/docs/img/mod/mod_cover.png",
+      "thumbnailArtUrl": "https://raw.githubusercontent.com/whozghiar/jak-project/mods/jak2-dark-jak-enhanced/docs/img/mod/mod_cover.png"
     }
   },
   "texturePacks": {}
