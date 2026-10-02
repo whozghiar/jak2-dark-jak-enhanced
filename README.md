@@ -21,7 +21,7 @@
 The **Dark Jak Enhanced** mod adds a full 3rd evolutionary stage to Dark Jak in Jak 2: the **Mega-Mega Dark Jak (Titan / Colossus)**, alongside critical quality-of-life improvements, restored acrobatics for Level 1 Dark Jak, instantaneous Dark Bomb activation, and enhanced collision resilience.
 
 - **Target Game:** Jak 2
-- **Active Branch:** `jak2/features/dark_jak_enhanced`
+- **Repository:** [`whozghiar/jak2-mod-dark-jak-enhanced`](https://github.com/whozghiar/jak2-mod-dark-jak-enhanced)
 
 ## ✨ Key Features
 - **Progressive 3-Tier Evolution (via `L2`):**
@@ -103,7 +103,7 @@ For the complete technical breakdown, architecture, and developer notes, refer t
 Le mod **Dark Jak Enhanced** ajoute un troisième stade d'évolution complet pour Dark Jak dans Jak 2 : le **Méga-Méga Dark Jak (Titan / Colosse)**, accompagné d'améliorations majeures d'acrobatie, de contrôles instantanés et d'une robustesse accrue face aux collisions.
 
 - **Jeu Ciblé :** Jak 2
-- **Branche Active :** `jak2/features/dark_jak_enhanced`
+- **Dépôt :** [`whozghiar/jak2-mod-dark-jak-enhanced`](https://github.com/whozghiar/jak2-mod-dark-jak-enhanced)
 
 ## ✨ Fonctionnalités Clés
 - **Évolution Progressive en 3 Stades (via `L2`) :**
