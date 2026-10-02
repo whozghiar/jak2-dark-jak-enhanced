@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0.0",
   "sourceName": "Dark Jak Enhanced Source",
-  "lastUpdated": "2026-10-02T14:15:51Z",
+  "lastUpdated": "2026-10-02T22:56:29Z",
   "mods": {
     "dark-jak-enhanced": {
       "displayName": "Dark Jak Enhanced",
-      "description": "The **Dark Jak Enhanced** mod adds a full 3rd evolutionary stage to Dark Jak in Jak 2: the **Mega-Mega Dark Jak (Titan / Colossus)**, alongside critical quality-of-life improvements, restored acrobatics for Level 1 Dark Jak, instantaneous Dark Bomb activation, and enhanced collision resilience.",
+      "description": "Dark Jak Enhanced mod adds a full 3rd evolutionary stage to Dark Jak in Jak 2: the Mega-Mega Dark Jak (Titan ), alongside improvements, restored acrobatics for Level 1 Dark Jak, instantaneous Dark Bomb activation, and enhanced collision resilience.",
       "authors": [
         "whozghiar"
       ],
@@ -20,17 +20,17 @@
       "versions": [
         {
           "version": "1.0.0",
-          "publishedDate": "2026-09-18T14:03:50Z",
+          "publishedDate": "2026-10-02T22:56:29Z",
           "supportedGames": [
             "jak2"
           ],
           "assets": {
-            "windows": "https://github.com/whozghiar/jak-project/releases/download/dark_jak_enhanced-v1.0.0/windows-dark_jak_enhanced-v1.0.0.zip",
-            "linux": "https://github.com/whozghiar/jak-project/releases/download/dark_jak_enhanced-v1.0.0/linux-dark_jak_enhanced-v1.0.0.zip"
+            "windows": "https://github.com/whozghiar/jak2-mod-dark-jak-enhanced/releases/download/dark-jak-enhanced-v1.0.0/windows-dark-jak-enhanced-v1.0.0.zip",
+            "linux": "https://github.com/whozghiar/jak2-mod-dark-jak-enhanced/releases/download/dark-jak-enhanced-v1.0.0/linux-dark-jak-enhanced-v1.0.0.zip"
           },
           "checksums": {
-            "windows": "198cda14d0503598bd161a38a0f0a4d4de7d816ca589b81c618b85a5ef0f14ea",
-            "linux": "54f64648bf3e87e447ef3fa41e608b86742ba4071d57953e6cdd799406d7d87d"
+            "windows": "203c57349cb7dffd6d721a76ffa2d95dfd103e0a7704aadffe86427d93d23df4",
+            "linux": "c4548d028581fce69a7198007af7f8249b260aad05c834b3d524ec837b093a68"
           }
         }
       ],
