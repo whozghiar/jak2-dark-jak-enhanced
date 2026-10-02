@@ -3,7 +3,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/OpenGOAL-Mod-blue.svg" alt="OpenGOAL Mod">
   <img src="https://img.shields.io/badge/Game-Jak%202-orange.svg" alt="Game">
-  <img src="https://img.shields.io/badge/Branch-jak2%2Ffeatures%2Fdark_jak_enhanced-green.svg" alt="Branch">
   <img src="https://img.shields.io/badge/AI--assisted-Modding-purple.svg" alt="AI Assisted">
 </p>
 
@@ -14,6 +13,9 @@
 ---
 
 # 🇬🇧 English Version
+
+> [!NOTE]
+> This mod moved from the `jak2/features/dark_jak_enhanced` branch of [whozghiar/jak-project](https://github.com/whozghiar/jak-project) to this repository. Earlier releases stay installable from the launcher catalog.
 
 ## 📖 Overview
 The **Dark Jak Enhanced** mod adds a full 3rd evolutionary stage to Dark Jak in Jak 2: the **Mega-Mega Dark Jak (Titan / Colossus)**, alongside critical quality-of-life improvements, restored acrobatics for Level 1 Dark Jak, instantaneous Dark Bomb activation, and enhanced collision resilience.
