@@ -77,11 +77,10 @@ task boot-game
 
 ### 5. Enable the Mod (OFF by default)
 This mod ships **disabled** — a fresh install plays Dark Jak exactly like stock
-Jak 2. Open the in-game debug menu and go to:
+Jak 2. Press **L3 + SELECT** in game to open the unified **Mods** menu (it works in a normal boot, no debug mode needed) and select:
 
-<<<<<<< HEAD
 ```
-Debug ▸ Mods ▸ dark-jak-enhanced ▸ Enable
+Mods ▸ dark-jak-enhanced ▸ Enable
 ```
 
 The choice persists across level reloads. Turn it off to restore vanilla Dark Jak
@@ -95,22 +94,6 @@ The choice persists across level reloads. Turn it off to restore vanilla Dark Ja
 ## 📖 Technical Documentation
 For the complete technical breakdown, architecture, and developer notes, refer to:
 - 📄 [`docs/modding/current_mod/dark_jak_enhanced_readme.md`](docs/modding/current_mod/dark_jak_enhanced_readme.md)
-=======
-| [`AGENTS.md`](AGENTS.md) | Unified AI agent directives and modding rules (branching, golden rules, REPL workflow, task reference). |
-| [`.agents/skills/`](.agents/skills/) | Modularized developer and agent skills (GOAL Lisp, engine internals, 3D assets/actors, texture modding). |
-| [`docs/modding/`](docs/modding/README.md) | Modding documentation hub (verified Lisp references, engine primer, engineering workflows, tools). |
-| [`docs/modding/jak1_lisp_instructions.md`](docs/modding/jak1_lisp_instructions.md) · [`jak2`](docs/modding/jak2_lisp_instructions.md) · [`jak3`](docs/modding/jak3_lisp_instructions.md) | **Verified** OpenGOAL Lisp reference per game — consult before coding. |
-| [`docs/modding/engine_generic_concepts.md`](docs/modding/engine_generic_concepts.md) | Shared non-Lisp engine primer (memory, heaps, DGOs, level streaming, process life cycle). |
-| [`docs/modding/tools/`](docs/modding/tools/) | Tool & pipeline guides (build workflow, custom assets, [Debug ▸ Mods menu](docs/modding/tools/mods_debug_menu.md)). |
-| [`docs/modding/templates/`](docs/modding/templates/) | [`MOD_README.template.md`](docs/modding/templates/MOD_README.template.md), [`mod_debug_menu.template.gc`](docs/modding/templates/mod_debug_menu.template.gc). |
-| [`docs/modding/branch_audit.md`](docs/modding/branch_audit.md) | Generated per-branch compliance report (`task modding-audit`). |
-| [`scripts/modding/`](scripts/modding/) | Python automation (branch creation, branch/doc sync, doc landing, branch audit). |
-| [`goal_src/`](goal_src/) | Decompiled and modified GOAL source code by game (`jak1/`, `jak2/`, `jak3/`). |
-| [`goalc/`](goalc/) | OpenGOAL compiler with modding adjustments. |
-| [`game/`](game/) | C++ runtime simulating the Emotion Engine memory on PC. |
-| [`decompiler/`](decompiler/) | Asset extraction and decompiler tools. |
-| [`custom_assets/`](custom_assets/) | Custom texture replacements and models. |
->>>>>>> origin/master-dev
 
 ---
 
@@ -195,54 +178,4 @@ Pour l'audit technique approfondi, l'architecture et les détails d'implémentat
 - 📄 [`docs/modding/current_mod/dark_jak_enhanced_readme.md`](docs/modding/current_mod/dark_jak_enhanced_readme.md)
 
 ---
-*(AI-assisted)*
-> Les builds et l'exécution utilisent [Taskfile](https://taskfile.dev/). Passez les arguments après `--`.
-
-### Jeu actif / Active game
-| Commande | 🇬🇧 | 🇫🇷 |
-| :--- | :--- | :--- |
-| `task set-game-jak1` · `-jak2` · `-jak3` | Persist the target game | Fixe le jeu ciblé |
-
-### Build & CMake
-| Commande | 🇬🇧 | 🇫🇷 |
-| :--- | :--- | :--- |
-| `task gen-cmake-release` | Configure the build (Ninja + clang); auto-wires `sccache` if installed | Configure le build ; câble `sccache` s'il est installé |
-| `task build-release` | Build **all** ~20 binaries (slow — first build / full check) | Build **complet** des ~20 binaires (lent) |
-| `task build-release-game` | Build only `gk` + `goalc` — fast, for engine/compiler C++ iteration | Build `gk` + `goalc` uniquement — rapide, pour le C++ moteur/compilateur |
-| `task build-release-decomp` | Build only the decompiler — after `decompiler/**` changes, then re-`extract` | Build le décompilateur seul — après modif `decompiler/**`, puis re-`extract` |
-| `task build-debug` / `-debug-game` / `-debug-decomp` | Debug equivalents | Équivalents debug |
-| `task clean-cmake` | Remove CMake artifacts | Supprime les artefacts CMake |
-
-### Extraction & décompilation / Extraction & decompile
-| Commande | 🇬🇧 | 🇫🇷 |
-| :--- | :--- | :--- |
-| `task extract` | Extract assets + run the decompiler (re-run after any `decompiler/config` change) | Extrait les assets + lance le décompilateur |
-| `task decomp` / `decomp-file FILE=…` | Decompile all / one object | Décompile tout / un objet |
-| `task rip-textures` / `rip-levels` / `rip-collision` / `rip-audio` | Rip specific asset kinds | Extrait un type d'asset précis |
-
-### REPL & exécution / REPL & run
-| Commande | 🇬🇧 | 🇫🇷 |
-| :--- | :--- | :--- |
-| `task repl` → `(mi)` | Open the compiler REPL; `(mi)` = incremental compile + hot reload (**no C++ build for `.gc` edits**) | Ouvre le REPL ; `(mi)` = compilation incrémentale + hot reload |
-| `task boot-game` / `boot-game-retail` | Boot the game (debug / retail) without the REPL | Démarre le jeu (debug / retail) sans REPL |
-| `task run-game` | Start the runtime, drive it from the REPL | Lance le runtime, piloté depuis le REPL |
-| `task format` / `format-gsrc FILE=…` | Format C++ / one GOAL file | Formate le C++ / un fichier GOAL |
-
-### Workflow de modding / Modding workflow
-| Commande | 🇬🇧 | 🇫🇷 |
-| :--- | :--- | :--- |
-| `task modding-new-branch -- jak2/features/x` | New mod branch from `master-dev` + initial README | Nouvelle branche de mod depuis `master-dev` + README initial |
-| `task modding-sync-branch` | Safe `git merge` of `master-dev` into the current branch (`-- --rebase` / `-- --push`) | `git merge` sûr de `master-dev` dans la branche courante |
-| `task modding-sync-docs` | Pull `docs/modding` + `AGENTS.md` + `CLAUDE.md` from `master-dev` (prunes deleted files) | Rapatrie la doc depuis `master-dev` (purge les fichiers supprimés) |
-| `task modding-land-doc -- --file docs/modding/jak2_lisp_instructions.md --message "…" --push` | Land a doc addition on `master-dev` conflict-free, then re-sync your branch | Intègre un ajout de doc sur `master-dev` sans conflit, puis resync |
-| `task modding-branch-status` | Test every mod branch's mergeability + refresh the dashboard (`-- --push` auto-merges) | Teste la fusionnabilité de chaque branche + actualise le tableau |
-| `task modding-audit` | Regenerate `docs/modding/branch_audit.md` | Régénère `docs/modding/branch_audit.md` |
-
-### Tests
-| Commande | 🇬🇧 | 🇫🇷 |
-| :--- | :--- | :--- |
-| `task offline-tests` / `offline-tests-fast` | Decompiler reference tests | Tests de référence du décompilateur |
-| `task unit-tests` / `tests-filtered FILTER=…` | `goalc` unit tests | Tests unitaires `goalc` |
-
->>>>>>> origin/master-dev
 *(AI-assisted)*
